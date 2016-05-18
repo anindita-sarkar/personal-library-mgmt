@@ -1,0 +1,9 @@
+To create a new database and user account
+=========================================
+
+create database plm_dev;
+create user plm_dev;
+grant all on plm_dev.* to 'plm_dev'@'localhost' identified by 'plm_dev';
+flush privileges;
+
+
