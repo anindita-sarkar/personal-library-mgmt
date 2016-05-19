@@ -1,0 +1,13 @@
+npm install express-generator -g
+npm init or express -e
+
+npm install express --save
+npm install body-parser --save
+npm install mysql --save
+
+npm install bower -g
+
+bower install jquery --save
+bower install bootstrap --save
+bower install angular --save
+bower install font-awesome --save
