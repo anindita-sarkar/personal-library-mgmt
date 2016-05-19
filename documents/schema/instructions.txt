@@ -7,3 +7,9 @@ grant all on plm_dev.* to 'plm_dev'@'localhost' identified by 'plm_dev';
 flush privileges;
 
 
+mysql -u plm_dev -p
+Enter Password: plm_dev
+use plm_dev
+SET autocommit=0 ;
+source D:/Anindita_KG/PLM/personal-library-mgmt/documents/schema/plm_dev.sql ;
+COMMIT ;
