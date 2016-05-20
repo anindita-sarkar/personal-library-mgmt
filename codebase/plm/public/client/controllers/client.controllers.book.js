@@ -1,6 +1,6 @@
-function BookCtrl($scope) {
+clientApp.controller("bookCtrl", function BookCtrl($scope) {
     $scope.title = 'List Of Books';
-}
+});
 
 
 //function mainController($scope, $http) {
