@@ -1,3 +1,16 @@
  app.controller('GenreController', function ($scope) {
-     $scope.title = "List Of Genre";
+    $scope.genres = [
+         {
+             name: 'Technical',
+             id: 1
+        },
+         {
+             name: 'Horror',
+             id: 2
+        },
+         {
+             name: 'Comedy',
+             id: 3
+        }
+    ];
  });

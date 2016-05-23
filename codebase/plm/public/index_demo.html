@@ -9,30 +9,30 @@
     <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./lib/angular/angular.min.js"></script>
     <script src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="./client-app/controllers/main.js"></script>
-    
-<!--    <script src="./client-app/controllers/mainController.js"></script>-->
+    <script src="./client-app/controllers/app.js"></script>
+    <!--
+    <script src="./client-app/controllers/mainController.js"></script>
     <script src="./client-app/controllers/bookController.js"></script>
     <script src="./client-app/controllers/genreController.js"></script>
-
+-->
 </head>
-<base href="/"/>
-<body ng-app="plm">
+
+<body ng-app="routerApp">
 
 
     <!-- NAVIGATION -->
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" ui-sref="#">PLM</a>
+            <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a ui-sref="books" ui-sref-active="active">Books</a></li>
-            <li><a ui-sref="genres" ui-sref-active="active">Genre</a></li>
+            <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+            <li><a ui-sref="about" ui-sref-active="active">About</a></li>
         </ul>
     </nav>
 
     <!-- MAIN CONTENT -->
-    <div class="container-fluid">
+    <div class="container">
 
         <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
         <div ui-view></div>
