@@ -11,3 +11,4 @@ bower install jquery --save
 bower install bootstrap --save
 bower install angular --save
 bower install font-awesome --save
+bower install angular-ui-router --save

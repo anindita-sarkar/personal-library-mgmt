@@ -16,7 +16,7 @@ genreRoute.configure(app);
 bookRoute.configure(app);
 
 app.get('/', function(req, res){
-  res.redirect('/client/index.html');
+  res.redirect('/index.html');
 });
 
 //app.get('*', function (req, res) {

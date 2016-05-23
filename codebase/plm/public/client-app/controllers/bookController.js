@@ -1,7 +1,6 @@
-clientApp.controller("bookCtrl", function BookCtrl($scope) {
-    $scope.title = 'List Of Books';
-});
-
+ app.controller('BookController', function ($scope) {
+        $scope.title = "List Of Books";
+    });
 
 //function mainController($scope, $http) {
 //    $scope.formData = {};
