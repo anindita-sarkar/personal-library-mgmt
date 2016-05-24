@@ -15,6 +15,7 @@ npm install mysql --save
 
 //Install bower to install frontend resources
 npm install bower -g
+bower init
 
 //Install front-end resources
 bower install jquery --save

@@ -31,19 +31,39 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
         })
         .state('genres.newGenre', {
             url: '/new',
-            templateUrl: 'templates/genres/partial-genre-add.html',
-            controller: 'GenreCreateController'
+            views: {
+
+                'genresDetailView@genres': {
+                    templateUrl: 'templates/genres/partial-genre-add.html',
+                    controller: 'GenreCreateController'
+                }
+
+            }
         })
         .state('genres.viewGenre', {
             url: '/:id/view',
-            templateUrl: 'templates/genres/partial-genre-view.html',
-            controller: 'GenreViewController'
+            views: {
+
+                'genresDetailView@genres': {
+                    templateUrl: 'templates/genres/partial-genre-view.html',
+                    controller: 'GenreViewController'
+                }
+
+            }
+
         })
-//        .state('genres.editGenre', {
-//            url: '/:id/edit',
-//            templateUrl: 'templates/genres/partial-genre-edit.html'
-//                // controller: 'GenreEditController'
-//        })
+        .state('genres.viewGenre.editGenre', {
+            url: '/:id/edit',
+            views: {
+
+                'genresDetailView@genres': {
+                    templateUrl: 'templates/genres/partial-genre-edit.html',
+                    controller: 'GenreEditController'
+                }
+
+                
+            }
+        })
 
     ;
 });

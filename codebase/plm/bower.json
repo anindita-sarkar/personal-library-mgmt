@@ -1,0 +1,23 @@
+{
+  "name": "plm",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Anindita A Sarkar <s.anindita16@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/anindita-sarkar/personal-library-mgmt",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3",
+    "jquery": "^2.2.4"
+  }
+}
