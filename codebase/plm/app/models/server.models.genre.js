@@ -1,7 +1,7 @@
 var connection = require('../../config/server.config.db');
 
 function Genre() {
-    this.get = function (res) {
+    this.getAll = function (res) {
         connection.acquire(function (err, con) {
             con.query('select * from plm_genre', function (err, result) {
                 con.release();
@@ -9,16 +9,23 @@ function Genre() {
             });
         });
     };
-
+    this.get = function (id, res) {
+        connection.acquire(function (err, con) {
+            con.query('select * from plm_genre where id = ?', [id], function (err, result) {
+                con.release();
+                res.send(result[0]);
+            });
+        });
+    };
     this.create = function (genre, res) {
         connection.acquire(function (err, con) {
-            var values = [genre.ID, genre.NAME];
-            con.query('insert into plm_genre (ID, NAME) VALUES(?, ?)', values, function (err, result) {
+
+            con.query('insert into plm_genre (ID, NAME) VALUES(?, ?)', [0, genre.Name], function (err, result) {
                 con.release();
                 if (err) {
                     res.send({
                         status: 1,
-                        message: 'Genre creation failed'
+                        message: err
                     });
                 } else {
                     res.send({

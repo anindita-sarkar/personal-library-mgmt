@@ -1,14 +1,36 @@
-npm install express-generator -g
-npm init or express -e
+//Steps for scaffolding
+//First install node.js
 
+Either:
+npm install express-generator -g
+express -e
+
+Or:
+npm init
+
+//Install backend modules
 npm install express --save
 npm install body-parser --save
 npm install mysql --save
 
+//Install bower to install frontend resources
 npm install bower -g
 
+//Install front-end resources
 bower install jquery --save
 bower install bootstrap --save
-bower install angular --save
 bower install font-awesome --save
+bower install angular --save
 bower install angular-ui-router --save
+bower install angular-resource --save
+
+//Install nodemon
+npm install nodemon -g
+
+//Boot up app
+nodemon server
+
+//Boot up mysql service
+
+//Check on browser
+localhost:8000/

@@ -1,16 +1,7 @@
- app.controller('GenreController', function ($scope) {
-    $scope.genres = [
-         {
-             name: 'Technical',
-             id: 1
-        },
-         {
-             name: 'Horror',
-             id: 2
-        },
-         {
-             name: 'Comedy',
-             id: 3
-        }
-    ];
+ app.controller('GenreController', function ($scope, GenreRespository, $stateParams) {
+     $scope.genres = GenreRespository.query();
+     $scope.genre = GenreRespository.find({
+         id: $stateParams.id
+     });
+
  });
