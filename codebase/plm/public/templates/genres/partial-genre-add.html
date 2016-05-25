@@ -1,6 +1,7 @@
-<form class="form-horizontal" role="form" ng-submit="addGenre()">
+<form name="genreForm" class="form-horizontal" role="form" ng-submit="addGenre(genreForm.$valid)" novalidate>
 
     <div ng-include="'templates/genres/partial-genre-form.html'">
 
     </div>
 </form>
+

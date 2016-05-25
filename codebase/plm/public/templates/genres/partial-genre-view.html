@@ -5,11 +5,13 @@
             <input type="text" class="form-control" id="name" placeholder="Genre type" value={{genre.Name}} ng-disabled=true>
         </div>
     </div>
-    
-    <div class="form-group">
-        <a class="btn btn-primary" ui-sref=".editGenre({id:genre.ID})">Edit</a>
 
-        <a class="btn btn-danger" ng-click="deleteGenre()">Delete</a>
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-11">
+            <a class="btn btn-primary" ui-sref=".editGenre({id:genre.ID})">Edit</a>
+            <a class="btn btn-danger" ng-click="deleteGenre()">Delete</a>
+        </div>
+
 
     </div>
 </form>

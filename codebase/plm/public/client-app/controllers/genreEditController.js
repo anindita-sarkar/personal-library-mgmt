@@ -3,15 +3,13 @@ app.controller('GenreEditController', function ($scope, $state, $stateParams, Ge
         id: $stateParams.id
     });
 
-    $scope.updateGenre = function () {
-        GenreRespository.update({
-            id: $stateParams.id
-        }, $scope.genre, function () {
-            $state.go('genres');
-        });
-
+    $scope.updateGenre = function (isValid) {
+        if (isValid) {
+            GenreRespository.update({
+                id: $stateParams.id
+            }, $scope.genre, function () {
+                $state.go('genres');
+            });
+        }
     };
-
-
-
 });

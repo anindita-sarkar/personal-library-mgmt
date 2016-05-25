@@ -1,13 +1,17 @@
-
-    <div class="form-group">
-        <label for="name" class="control-label col-sm-1">Genre Type</label>
-        <div class="col-sm-11">
-            <input type="text" class="form-control" ng-model="genre.Name"id="name" placeholder="Genre type">
+<div class="form-group" ng-class="{ 'has-error' : genreForm.name.$invalid && !genreForm.name.$pristine }">
+    <label for="name" class="control-label col-sm-1">Genre Type</label>
+    <div class="col-sm-11">
+        <div class="row">
+            <input type="text" name="name" class="form-control" ng-model="genre.Name" ng-minlength="3" ng-maxlength="100" required/>
+            <p ng-show="genreForm.name.$error.minlength" class="help-block">Genre type is too short.</p>
+            <p ng-show="genreForm.name.$error.maxlength" class="help-block">Genre type is too long.</p>
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-sm-offset-1 col-sm-11">
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary" ng-disabled="genreForm.$invalid">Save</button>
         </div>
     </div>
+
+</div>
