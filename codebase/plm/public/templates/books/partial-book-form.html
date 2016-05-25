@@ -1,45 +1,54 @@
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : bookForm.title.$touched && bookForm.title.$invalid }">
     <label for="title" class="control-label col-sm-1">Title</label>
     <div class="col-sm-11">
-        <input type="text" class="form-control" id="title" placeholder="Title" ng-model="book.Title">
+
+        <input type="text" class="form-control" name="title" placeholder="Title" ng-model="book.Title" ng-maxlength="255" required/>
+        <p ng-show="bookForm.title.$error.required && bookForm.title.$touched" class="help-block">Title is required.</p>
+        <p ng-show="bookForm.title.$error.maxlength" class="help-block">Title is too long.</p>
     </div>
 </div>
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : bookForm.authors.$touched && bookForm.authors.$invalid }">
     <label for="authors" class="control-label col-sm-1">Authors</label>
     <div class="col-sm-11">
-        <input type="text" class="form-control" id="authors" placeholder="Authors" ng-model="book.Authors">
+        <input type="text" class="form-control" name="authors" placeholder="Authors" ng-model="book.Authors" ng-maxlength="255">
+        <p ng-show="bookForm.authors.$error.maxlength" class="help-block">Authors is too long.</p>
     </div>
 </div>
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : bookForm.isbn.$touched && bookForm.isbn.$invalid }">
     <label for="isbn" class="control-label col-sm-1">ISBN</label>
     <div class="col-sm-11">
-        <input type="text" class="form-control" id="isbn" placeholder="ISBN" ng-model="book.ISBN">
+        <input type="text" class="form-control" name="isbn" placeholder="ISBN" ng-model="book.ISBN" ng-maxlength="30">
+        <p ng-show="bookForm.isbn.$error.maxlength" class="help-block">ISBN is too long.</p>
     </div>
 </div>
 
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : bookForm.genre.$touched && bookForm.genre.$invalid  }">
     <label for="genre" class="control-label col-sm-1">Genre</label>
     <div class="col-sm-11">
-        <select class="form-control" id="genre" ng-model="book.Genre_ID" ng-options="genre.ID as genre.Name for genre in genres">
+        <select class="form-control" name="genre" ng-model="book.Genre_ID" ng-options="genre.ID as genre.Name for genre in genres" required>
         </select>
+        <p ng-show="bookForm.genre.$error.required " class="help-block">Please select a Genre.</p>
+
     </div>
 </div>
 
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : bookForm.summary.$touched && bookForm.summary.$invalid }">
     <label for="summary" class="control-label col-sm-1">Summary</label>
     <div class="col-sm-11">
-        <textarea class="form-control" rows="5" id="summary" placeholder="Summary" ng-model="book.Summary" />
+        <textarea class="form-control" rows="5" name="summary" placeholder="Summary" ng-model="book.Summary" ng-maxlength="2000" />
+        <p ng-show="bookForm.summary.$error.maxlength " class="help-block">Summary is too long.</p>
     </div>
 </div>
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : bookForm.notes.$touched && bookForm.notes.$invalid }">
     <label for="notes" class="control-label col-sm-1">Notes</label>
     <div class="col-sm-11">
-        <textarea class="form-control" rows="5" id="notes" placeholder="Notes" ng-model="book.Notes" />
+        <textarea class="form-control" rows="5" name="notes" placeholder="Notes" ng-model="book.Notes" ng-maxlength="255" />
+        <p ng-show="bookForm.notes.$error.maxlength " class="help-block">Notes is too long.</p>
     </div>
 </div>
 
 <div class="form-group">
     <div class="col-sm-offset-1 col-sm-11">
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" ng-disabled="bookForm.$invalid">Save</button>
     </div>
 </div>
