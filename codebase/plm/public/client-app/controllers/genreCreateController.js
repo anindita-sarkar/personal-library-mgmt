@@ -5,7 +5,4 @@ app.controller('GenreCreateController', function ($scope, $state, GenreResposito
         GenreRespository.save($scope.genre);
         $state.go('genres');
     }
-
-
-
 });

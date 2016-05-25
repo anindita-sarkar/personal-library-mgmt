@@ -1,51 +1,45 @@
-<form class="form-horizontal">
+<div class="form-group">
+    <label for="title" class="control-label col-sm-1">Title</label>
+    <div class="col-sm-11">
+        <input type="text" class="form-control" id="title" placeholder="Title" ng-model="book.Title">
+    </div>
+</div>
+<div class="form-group">
+    <label for="authors" class="control-label col-sm-1">Authors</label>
+    <div class="col-sm-11">
+        <input type="text" class="form-control" id="authors" placeholder="Authors" ng-model="book.Authors">
+    </div>
+</div>
+<div class="form-group">
+    <label for="isbn" class="control-label col-sm-1">ISBN</label>
+    <div class="col-sm-11">
+        <input type="text" class="form-control" id="isbn" placeholder="ISBN" ng-model="book.ISBN">
+    </div>
+</div>
 
-    <div class="form-group">
-        <label for="title" class="control-label col-sm-1">Title</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="title" placeholder="Title">
-        </div>
+<div class="form-group">
+    <label for="genre" class="control-label col-sm-1">Genre</label>
+    <div class="col-sm-11">
+        <select class="form-control" id="genre" ng-model="book.Genre_ID" ng-options="genre.ID as genre.Name for genre in genres">
+        </select>
     </div>
-    <div class="form-group">
-        <label for="authors" class="control-label col-sm-1">Authors</label>
-        <div class="col-sm-11">
-            <input type="text" class="form-control" id="authors" placeholder="Authors">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="isbn" class="control-label col-sm-1">ISBN</label>
-        <div class="col-sm-11">
-            <input type="text" class="form-control" id="isbn" placeholder="ISBN">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="genre" class="control-label col-sm-1">Select list:</label>
-        <div class="col-sm-11">
-            <select class="form-control" id="genre">
-                <option>Technical</option>
-                <option>Horror</option>
-                <option>Romance</option>
+</div>
 
-            </select>
-        </div>
+<div class="form-group">
+    <label for="summary" class="control-label col-sm-1">Summary</label>
+    <div class="col-sm-11">
+        <textarea class="form-control" rows="5" id="summary" placeholder="Summary" ng-model="book.Summary" />
     </div>
-    <div class="form-group">
-        <label for="summary" class="control-label col-sm-1">Summary</label>
-        <div class="col-sm-11">
-            <textarea class="form-control" rows="5" id="summary" placeholder="Summary" />
-        </div>
+</div>
+<div class="form-group">
+    <label for="notes" class="control-label col-sm-1">Notes</label>
+    <div class="col-sm-11">
+        <textarea class="form-control" rows="5" id="notes" placeholder="Notes" ng-model="book.Notes" />
     </div>
-    <div class="form-group">
-        <label for="notes" class="control-label col-sm-1">Notes</label>
-        <div class="col-sm-11">
-            <textarea class="form-control" rows="5" id="notes" placeholder="Notes" />
-        </div>
-    </div>
+</div>
 
-
-    <div class="form-group">
-        <div class="col-sm-offset-1 col-sm-11">
-            <button type="submit" class="btn btn-primary">Save</button>
-        </div>
+<div class="form-group">
+    <div class="col-sm-offset-1 col-sm-11">
+        <button type="submit" class="btn btn-primary">Save</button>
     </div>
-</form>
+</div>

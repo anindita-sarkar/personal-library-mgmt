@@ -1,0 +1,48 @@
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="title" class="control-label col-sm-1">Title</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control" id="title" placeholder="Title" ng-model="book.Title" ng-disabled=true>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="authors" class="control-label col-sm-1">Authors</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control" id="authors" placeholder="Authors" ng-model="book.Authors" ng-disabled=true>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="isbn" class="control-label col-sm-1">ISBN</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control" id="isbn" placeholder="ISBN" ng-model="book.ISBN" ng-disabled=true>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="genre" class="control-label col-sm-1">Genre</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control" id="genre" placeholder="Genre" ng-model="genre.Name" ng-disabled=true>
+
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="summary" class="control-label col-sm-1">Summary</label>
+        <div class="col-sm-11">
+            <textarea class="form-control" rows="5" id="summary" placeholder="Summary" ng-model="book.Summary" ng-disabled=true/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="notes" class="control-label col-sm-1">Notes</label>
+        <div class="col-sm-11">
+            <textarea class="form-control" rows="5" id="notes" placeholder="Notes" ng-model="book.Notes" ng-disabled=true/>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <a class="btn btn-primary" ui-sref=".editBook({id:book.id})">Edit</a>
+
+        <a class="btn btn-danger" ng-click="deleteBook()">Delete</a>
+
+    </div>
+</form>

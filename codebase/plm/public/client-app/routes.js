@@ -5,22 +5,41 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
     $stateProvider
         .state('books', {
             url: '/books',
+            templateUrl: 'templates/books/partial-books.html',
+            controller: 'BookListController'
+        })
+        .state('books.newBook', {
+            url: '/new',
             views: {
 
-                '': {
-                    templateUrl: 'templates/books/partial-books.html',
-                    controller: 'BookController'
-                },
-
-                'columnOne@books': {
-                    templateUrl: 'templates/books/partial-books-list.html'
-
-                },
-
-                'columnTwo@books': {
-                    templateUrl: 'templates/books/partial-book-form.html'
-
+                'booksDetailView@books': {
+                    templateUrl: 'templates/books/partial-book-add.html',
+                    controller: 'BookCreateController'
                 }
+
+            }
+        })
+        .state('books.viewBook', {
+            url: '/:id/view',
+            views: {
+
+                'booksDetailView@books': {
+                    templateUrl: 'templates/books/partial-book-view.html',
+                    controller: 'BookViewController'
+                }
+
+            }
+
+        })
+        .state('books.viewBook.editBook', {
+            url: '/:id/edit',
+            views: {
+
+                'booksDetailView@books': {
+                    templateUrl: 'templates/books/partial-book-edit.html',
+                    controller: 'BookEditController'
+                }
+
 
             }
         })
@@ -61,7 +80,7 @@ app.config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
                     controller: 'GenreEditController'
                 }
 
-                
+
             }
         })
 

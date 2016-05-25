@@ -1,15 +1,15 @@
-<div class="form-group">
-    <label for="name" class="control-label col-sm-1">Genre Type</label>
-    <div class="col-sm-11">
-        <input type="text" class="form-control" id="name" placeholder="Genre type" value={{genre.Name}}>
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="name" class="control-label col-sm-1">Genre Type</label>
+        <div class="col-sm-11">
+            <input type="text" class="form-control" id="name" placeholder="Genre type" value={{genre.Name}} ng-disabled=true>
+        </div>
     </div>
-</div>
-<div class="form-group">
-    &nbsp;
-</div>
-<div class="form-group">
-    <a class="btn btn-primary" ui-sref=".editGenre({id:genre.ID})">Edit</a>
+    
+    <div class="form-group">
+        <a class="btn btn-primary" ui-sref=".editGenre({id:genre.ID})">Edit</a>
 
-    <a class="btn btn-danger" ng-click="deleteGenre()">Delete</a>
+        <a class="btn btn-danger" ng-click="deleteGenre()">Delete</a>
 
-</div>
+    </div>
+</form>

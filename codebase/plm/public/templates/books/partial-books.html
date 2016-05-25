@@ -1,18 +1,20 @@
 <div class="panel panel-default">
-    <div class="panel-body panel-info" >
-       <h2>Books Management</h2>
+    <div class="panel-body panel-info">
+        <h2>Books Management</h2>
     </div>
 </div>
 <div class="row">
-
-    <!-- COLUMN ONE NAMED VIEW -->
     <div class="col-sm-4">
-        <div ui-view="columnOne"></div>
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a ui-sref=".newBook">Add book</a></li>
+            <li role="presentation" ng-repeat="book in books"><a ui-sref=".viewBook({id:book.id})">{{ book.Title }}</a></li>
+        </ul>
     </div>
 
-    <!-- COLUMN TWO NAMED VIEW -->
+
     <div class="col-sm-8">
-        <div ui-view="columnTwo"></div>
+        <div ui-view="booksDetailView"></div>
     </div>
+
 
 </div>

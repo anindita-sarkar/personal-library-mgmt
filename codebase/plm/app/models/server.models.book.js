@@ -1,7 +1,7 @@
 var connection = require('../../config/server.config.db');
 
 function Books() {
-    this.get = function (res) {
+    this.getAll = function (res) {
         connection.acquire(function (err, con) {
             con.query('select * from plm_books', function (err, result) {
                 con.release();
@@ -9,6 +9,15 @@ function Books() {
             });
         });
     };
+    this.get = function (id, res) {
+        connection.acquire(function (err, con) {
+            con.query('select * from plm_books where id = ?', [id], function (err, result) {
+                con.release();
+                res.send(result[0]);
+            });
+        });
+    };
+
 
     this.create = function (book, res) {
         connection.acquire(function (err, con) {
