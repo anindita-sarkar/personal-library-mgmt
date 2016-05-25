@@ -1,13 +1,16 @@
 {
-    "name": "plm",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node server.js"
-    },
-    "dependencies": {
-        "body-parser": "^1.13.3",
-        "express": "^4.13.4",
-        "mysql": "^2.10.2"
-    }
+  "name": "plm",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.4",
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }

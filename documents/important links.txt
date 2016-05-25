@@ -14,3 +14,11 @@ https://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/
 Favicon generator
 http://antifavicon.com/
 http://www.chami.com/html-kit/services/favicon/
+
+auth
+https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
+http://jasonwatmore.com/post/2016/04/05/AngularJS-JWT-Authentication-Example-Tutorial.aspx
+http://thejackalofjavascript.com/architecting-a-restful-node-js-app/
+https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+http://www.hacksparrow.com/express-js-https.html
+http://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543s
