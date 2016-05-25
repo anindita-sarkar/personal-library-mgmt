@@ -10,3 +10,7 @@ https://scotch.io/tutorials/3-simple-tips-for-using-ui-router
 
 CRUD with UI Router  and ng-resource
 https://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/
+
+Favicon generator
+http://antifavicon.com/
+http://www.chami.com/html-kit/services/favicon/

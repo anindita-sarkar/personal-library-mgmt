@@ -1,5 +1,5 @@
 app.factory('BookRespository', function ($resource) {
-    var resource = $resource("http://localhost:8000/api/book/:id", {
+    var resource = $resource("/api/book/:id", {
             id: '@id'
         },
 
